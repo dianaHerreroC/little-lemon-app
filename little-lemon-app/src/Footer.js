@@ -2,8 +2,8 @@ import logo2 from './assets/Logo 2.png';
 
 function Footer(){
     return(
-        <footer>
-            <img src={logo2} alt="Little lemon logo"></img>
+        <footer className="footer">
+            <img src={logo2} alt="Little lemon logo" width="90"></img>
             <div>
                 <h2>Doormat Navigation</h2>
                 <ul>
