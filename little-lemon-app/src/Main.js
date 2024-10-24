@@ -1,10 +1,15 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './HomePage'
+import BookingPage from './BookingPage'
+
 function Main(){
     return(
         <main className="main">
-            <h1>Display title = h1</h1>
-            <h2>Sub title = h2</h2>
-            <h3>Card title = h3</h3>
-            <p>Body = p</p>
+            <Routes>
+                <Route path="/" element={<HomePage/>}></Route>
+                <Route path="/booking" element={<BookingPage/>}></Route>
+            </Routes>
         </main>
     );
 };

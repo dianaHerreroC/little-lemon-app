@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 import logo2 from './assets/Logo 2.png';
 
 function Footer(){
@@ -10,22 +12,22 @@ function Footer(){
                 <h3>Doormat Navigation</h3>
                 <ul>
                     <li>
-                        <a href="#home">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <Link to="/">About</Link>
                     </li>
                     <li>
-                        <a href="#menu">Menu</a>
+                        <Link to="/">Menu</Link>
                     </li>
                     <li>
-                        <a href="#reservations">Reservations</a>
+                        <Link to="/booking">Reservations</Link>
                     </li>
                     <li>
-                        <a href="#orderOnline">Order online</a>
+                        <Link to="/">Order online</Link>
                     </li>
                     <li>
-                        <a href="#login">Login</a>
+                        <Link to="/">Login</Link>
                     </li>
                 </ul>
             </div>

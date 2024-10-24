@@ -1,3 +1,14 @@
+/*Variables globales para colores*/
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --secondary-dark-salmon: #EE9972;
+  --secondary-light-salmon: #FBDABB;
+  --highlights-white: #EDEFEE;
+  --highlights-black: #333333;
+}
+
+/*Grid*/
 .App {
   display:grid;
   grid-template-areas:
@@ -8,8 +19,10 @@
   grid-template-rows: 1fr 16fr 3fr;
   height: 100vh;
   margin: 16px;
+  background-color: var(--highlights-white);
 }
 
+/*Secciones del grid*/
 .main, .footer {
   overflow: auto; /* Evita que el contenido sobrepase el área */
   white-space: normal; /* Permite que el texto se divida en varias líneas */
@@ -19,18 +32,15 @@
   grid-area:head;
   align-items: center;
   padding:0.3em;
-  background-color: #ff0000; /* Color de fondo para visualizar mejor */
 }
 .nav{
   grid-area:nav;
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #37ff00; /* Color de fondo para visualizar mejor */
 }
 .main{
   grid-area:main;
-  background-color: #0033ff; /* Color de fondo para visualizar mejor */
 }
 .footer{
   grid-area:footer;
@@ -38,8 +48,10 @@
   justify-content: space-around;
   gap: 0.2em;
   padding:0.3em;
-  background-color: #fbff00; /* Color de fondo para visualizar mejor */
+  
 }
+
+/*footer*/
 .footer > div {
   flex: 1 1 0; /* flex-grow, flex-shrink y flex-basis */
   min-width: 0; /* Permite que el div se ajuste correctamente */
@@ -47,12 +59,14 @@
   padding:0.3em;
 }
 
+/*Nav*/
 .navigation-links{
   display: inline-flex;
   justify-content: space-around;
   width:100%;
 }
 
+/*Estilos y tamaños de letra generales*/
 h1,h2,h3,p,a,li{
   white-space: normal;
 }
