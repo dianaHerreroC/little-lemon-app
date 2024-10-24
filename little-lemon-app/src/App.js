@@ -8,10 +8,10 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-      <Header className="header"/>
-      <Nav className="nav"/>
-      <Main className="main"/>
-      <Footer className="footer"/>
+      <Header/>
+      <Nav/>
+      <Main/>
+      <Footer/>
     </div>
   );
 }

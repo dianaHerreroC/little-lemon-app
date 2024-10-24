@@ -10,29 +10,41 @@
   margin: 16px;
 }
 
+.main, .footer {
+  overflow: auto; /* Evita que el contenido sobrepase el área */
+  white-space: normal; /* Permite que el texto se divida en varias líneas */
+  word-wrap: break-word; /* Divide las palabras largas que no caben */
+}
 .header{
   grid-area:head;
   align-items: center;
-  width:100%;
+  padding:0.3em;
   background-color: #ff0000; /* Color de fondo para visualizar mejor */
 }
-
 .nav{
   grid-area:nav;
   display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: #37ff00; /* Color de fondo para visualizar mejor */
 }
-
 .main{
   grid-area:main;
   background-color: #0033ff; /* Color de fondo para visualizar mejor */
 }
-
 .footer{
   grid-area:footer;
-  display: inline-flex;
+  display: flex;
   justify-content: space-around;
+  gap: 0.2em;
+  padding:0.3em;
   background-color: #fbff00; /* Color de fondo para visualizar mejor */
+}
+.footer > div {
+  flex: 1 1 0; /* flex-grow, flex-shrink y flex-basis */
+  min-width: 0; /* Permite que el div se ajuste correctamente */
+  min-width: 0;
+  padding:0.3em;
 }
 
 .navigation-links{
@@ -41,3 +53,39 @@
   width:100%;
 }
 
+h1,h2,h3,p,a,li{
+  white-space: normal;
+}
+h1{
+  font-size: x-large;
+  font-family: "Markazi Text";
+  font-weight: 600;
+}
+h2{
+  font-size: large;
+  font-family: "Markazi Text";
+  font-weight:500;
+}
+h3{
+  font-size: small;
+  font-family: "Karla";
+  font-weight:bold;
+  margin:0;
+}
+p{
+  font-size: small;
+  font-family: "Karla";
+  font-weight:500;
+}
+li a, li{
+  font-size:xx-small;
+  font-family: "Karla";
+  font-weight:bolder;
+  text-transform:uppercase;
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+  padding:0;
+  margin:0.2em;
+}
