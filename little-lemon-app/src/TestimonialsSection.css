@@ -1,3 +1,7 @@
 .TestimonialsSection{
     background-color: var(--primary-green);
+    color:var(--highlights-white);
+}
+.TestimonialsSection>h1{
+    color:var(--primary-yellow);
 }

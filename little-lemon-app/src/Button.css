@@ -1,0 +1,8 @@
+.Button{
+    background-color:var(--primary-yellow);
+    color:var(--highlights-black);
+    font-family: "Karla";
+    font-weight:normal;
+    font-size: small;
+    border-radius: 0.5em;
+}

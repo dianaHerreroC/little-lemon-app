@@ -1,3 +1,7 @@
 .HeroSection{
     background-color: var(--primary-green);
+    color:var(--highlights-white);
+}
+.HeroSection>h1{
+    color:var(--primary-yellow);
 }
