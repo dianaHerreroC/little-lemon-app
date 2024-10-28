@@ -6,9 +6,13 @@
 }
 .HeroSection h1{
     color:var(--primary-yellow);
+    margin-bottom: 2%;
 }
 .HeroSection>.RightSection img{
     max-height: 35vh;
     border-radius: 1em;
     margin-top: 0.5em;
+}
+.HeroSection>.LeftSection{
+    padding-bottom: 7%;
 }

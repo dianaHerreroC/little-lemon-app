@@ -2,11 +2,11 @@
     background-color: var(--primary-green);
     color:var(--highlights-white);
     text-align: center;
-    padding-bottom: 2%;
+    padding-bottom: 7%;
+    padding-top:7%;
 }
 .TestimonialsSection>h1{
     color:var(--primary-yellow);
-    padding-top:5%;
 }
 .TestimonialsSection>.Testimonials{
     display: flex;
