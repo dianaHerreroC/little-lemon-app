@@ -1,7 +1,14 @@
 .HeroSection{
     background-color: var(--primary-green);
     color:var(--highlights-white);
+    display: flex;
+    gap: 7vw;
 }
-.HeroSection>h1{
+.HeroSection h1{
     color:var(--primary-yellow);
+}
+.HeroSection>.RightSection img{
+    max-height: 35vh;
+    border-radius: 1em;
+    margin-top: 0.5em;
 }

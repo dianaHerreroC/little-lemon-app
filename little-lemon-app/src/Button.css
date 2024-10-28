@@ -5,4 +5,5 @@
     font-weight:normal;
     font-size: small;
     border-radius: 0.5em;
+    height: min-content;
 }

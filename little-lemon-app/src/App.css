@@ -66,6 +66,12 @@
   width:100%;
 }
 
+/*Main*/
+.main>section{
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
+
 /*Estilos y tamaños de letra generales*/
 h1,h2,h3,p,a,li{
   white-space: normal;
