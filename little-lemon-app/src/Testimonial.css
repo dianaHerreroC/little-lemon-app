@@ -1,0 +1,28 @@
+.Testimonial{
+    width: 20vh;
+    height: 30vh;
+    background-color: var(--highlights-white);
+    color: var(--highlights-black);
+    border-radius: 0.5em;
+    display:flex;
+    flex-direction:column;
+    flex: 0 0 auto;
+    padding:0.5em;
+    gap:0.5em;
+}
+.Testimonial .User{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Testimonial img{
+    width:25%;
+    border-radius: 50%;
+}
+.Testimonial .Rating{
+    color: var(--secondary-dark-salmon)
+}
+.Testimonial p{
+    overflow-x:overlay;
+    margin:0;
+}

@@ -10,11 +10,11 @@ import lemonDessertImage from './assets/lemon dessert.jpg';
 function SpecialsSection(){
     return(
         <section className='SpecialsSection'>
-            <div className='Heading'>
+            <span className='Heading'>
                 <h1>This week specials!</h1>
                 <Button>Online Menu</Button>
-            </div>
-            <div className='SpecialsCards'>
+            </span>
+            <span className='SpecialsCards'>
                 <SpecialsCard
                     name='Greek Salad'
                     price='$12.99'
@@ -37,7 +37,7 @@ function SpecialsSection(){
                     last ingredient has been sourced and is as authentic as can be imagined.'
                     image={lemonDessertImage}
                 ></SpecialsCard>
-            </div>
+            </span>
         </section>
     );
 };

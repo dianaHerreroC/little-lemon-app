@@ -1,7 +1,15 @@
 .TestimonialsSection{
     background-color: var(--primary-green);
     color:var(--highlights-white);
+    text-align: center;
+    padding-bottom: 2%;
 }
 .TestimonialsSection>h1{
     color:var(--primary-yellow);
+    padding-top:5%;
+}
+.TestimonialsSection>.Testimonials{
+    display: flex;
+    gap: 2%;
+    overflow-x:auto;
 }
