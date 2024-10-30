@@ -1,22 +1,21 @@
 import { useState } from "react";
 import './BookingForm.css'
 
-function BookingForm(){
+function BookingForm(props){
     const [date, setDate] = useState(() => {
         const today = new Date();
         return today.toISOString().split("T")[0]; // Convierte a "YYYY-MM-DD"
     });
-    const [time, setTime]=useState("21:00");
+    const [time, setTime]=useState();
     const [guests, setGuests]=useState("1");
     const [occasion, setOccasion]=useState("Birthday");
-    
-    const availableTimes=["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 
     const handleSubmit= (e) =>{
     };
 
     return(
         <form className="BookingForm" onSubmit={handleSubmit}>
+            <h1>Reserve a table</h1>
             <div className='DateField'>
                 <label htmlFor="date">Date</label>
                 <input
@@ -24,7 +23,10 @@ function BookingForm(){
                     id="date"
                     name="Date"
                     value={date}
-                    onChange={(e)=>setDate(e.target.value)}
+                    onChange={(e)=>{
+                        setDate(e.target.value);
+                        props.dispatchAT({type:e.target.value});
+                    }}
                 ></input>
             </div>
             <div className='TimeField'>
@@ -34,7 +36,7 @@ function BookingForm(){
                     value={time}
                     onChange={(e)=>setTime(e.target.value)}
                 >
-                    {availableTimes.map((timeOption) => (
+                    {(props.availableTimes || []).map((timeOption) => (
                         <option key={timeOption} value={timeOption}>
                             {timeOption}
                         </option>
