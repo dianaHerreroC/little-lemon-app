@@ -18,8 +18,8 @@ describe("initializeTimes", () => {
 describe("updateTimes", () => {
   test("should return the same state if no logic is applied", () => {
       const initialState = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-      const action = {};  // Vacío por ahora, ya que la lógica se añadirá más adelante
+      const date = {};  // Vacío por ahora, ya que la lógica se añadirá más adelante
 
-      expect(updateTimes(initialState, action)).toEqual(initialState);
+      expect(updateTimes(initialState, date)).toEqual(initialState);
   });
 });

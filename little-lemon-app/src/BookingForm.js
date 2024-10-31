@@ -4,13 +4,15 @@ import './BookingForm.css'
 function BookingForm(props){
     const [date, setDate] = useState(() => {
         const today = new Date();
-        return today.toISOString().split("T")[0]; // Convierte a "YYYY-MM-DD"
+        return today.toISOString().split("T")[0]; // Convert to "YYYY-MM-DD"
     });
     const [time, setTime]=useState();
     const [guests, setGuests]=useState("1");
     const [occasion, setOccasion]=useState("Birthday");
 
     const handleSubmit= (e) =>{
+        e.preventDefault();
+        props.submitForm(e);
     };
 
     return(

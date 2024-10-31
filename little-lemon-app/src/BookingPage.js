@@ -1,15 +1,19 @@
-import { useReducer } from "react";
+import { useReducer} from "react";
 import BookingForm from "./BookingForm";
+import { fetchAPI } from './myApi';
 
-export const updateTimes = (state, action) =>{
-    return state;
+export const updateTimes = (state, date) =>{
+    const [year, month, day] = date.type.split("-").map(Number);
+    const dateObject = new Date(year, month - 1, day);
+    return fetchAPI(dateObject);
 }
 export const initializeTimes  = ()=>{
-    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+    const today = new Date();
+    return fetchAPI(today);
 }
 
-function BookingPage(){
-    const [availableTimes, dispatchAT]=useReducer(updateTimes, [], initializeTimes);
+function BookingPage(props){
+    const [availableTimes, dispatchAT]=useReducer(updateTimes, initializeTimes());
     return(
         <>
             {/*<h1>Booking page</h1>
@@ -17,7 +21,7 @@ function BookingPage(){
             <h2>Sub title = h2</h2>
             <h3>Card title = h3</h3>
             <p>Body = p</p>*/}
-            <BookingForm availableTimes={availableTimes} dispatchAT={dispatchAT}></BookingForm>
+            <BookingForm availableTimes={availableTimes} dispatchAT={dispatchAT} submitForm={props.submitForm}></BookingForm>
         </>
     );
 };
