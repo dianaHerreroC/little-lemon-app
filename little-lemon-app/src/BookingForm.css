@@ -1,7 +1,9 @@
 .BookingForm{
     display: flex; flex-direction: column; max-width: 200px; gap: 20px
 }
-
+.BookingForm .errorField{
+    border-color: red;
+}
 .BookingForm .errorMessage{
     color:red;
     font-size: xx-small;

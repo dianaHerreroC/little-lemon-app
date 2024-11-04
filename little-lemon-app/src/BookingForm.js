@@ -1,6 +1,13 @@
 import { useState } from "react";
 import './BookingForm.css'
 
+export const validateTime=(time)=>{
+    return Boolean(time);
+}
+export const validateOccasion=(occasion)=>{
+    return Boolean(occasion);
+}
+
 function BookingForm(props){
     const [date, setDate] = useState(() => {
         const today = new Date();
@@ -17,12 +24,6 @@ function BookingForm(props){
 
     const [timeError, setTimeError] = useState(false);
     const [occasionError, setOccasionError] = useState(false);
-    const validateTime=(time)=>{
-        return time!=="";
-    }
-    const validateOccasion=(occasion)=>{
-        return occasion!=="";
-    }
     const validateForm=()=>{
         return validateTime(time)&&validateOccasion(occasion);
     };
@@ -31,7 +32,7 @@ function BookingForm(props){
         <form className="BookingForm" onSubmit={handleSubmit}>
             <h1>Reserve a table</h1>
             <div className='DateField'>
-                <label htmlFor="date">Date</label>
+                <label htmlFor="date">Date </label>
                 <input
                     type="date"
                     id="date"
@@ -45,7 +46,7 @@ function BookingForm(props){
                 ></input>
             </div>
             <div className='TimeField'>
-                <label htmlFor="time">Time</label>
+                <label htmlFor="time">Time </label>
                 <select
                     id="time"
                     value={time}
@@ -66,7 +67,7 @@ function BookingForm(props){
                 {timeError && <span className="errorMessage">Please select a time.</span>}
             </div>
             <div className='GuestsField'>
-                <label htmlFor="guests">Number of guests</label>
+                <label htmlFor="guests">Number of guests </label>
                 <input
                     type="number"
                     id="guests"
@@ -78,7 +79,7 @@ function BookingForm(props){
                 ></input>
             </div>
             <div className='Occasion'>
-                <label htmlFor="occasion">Occasion</label>
+                <label htmlFor="occasion">Occasion </label>
                 <select
                     id="occasion"
                     value={occasion}
