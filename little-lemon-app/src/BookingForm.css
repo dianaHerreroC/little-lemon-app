@@ -1,3 +1,8 @@
 .BookingForm{
-    display: grid; max-width: 200px; gap: 20px
+    display: flex; flex-direction: column; max-width: 200px; gap: 20px
+}
+
+.BookingForm .errorMessage{
+    color:red;
+    font-size: xx-small;
 }
