@@ -30,8 +30,10 @@ function BookingForm(props){
 
     return(
         <form className="BookingForm" onSubmit={handleSubmit}>
-            <h1>Reserve a table</h1>
-            <div className='DateField'>
+            <header>
+                <h1>Reserve a table</h1>
+            </header>
+            <section className='DateField'>
                 <label htmlFor="date">Date </label>
                 <input
                     type="date"
@@ -44,8 +46,8 @@ function BookingForm(props){
                     }}
                     min={new Date().toISOString().split("T")[0]}
                 ></input>
-            </div>
-            <div className='TimeField'>
+            </section>
+            <section className='TimeField'>
                 <label htmlFor="time">Time </label>
                 <select
                     id="time"
@@ -65,8 +67,8 @@ function BookingForm(props){
                     ))}
                 </select>
                 {timeError && <span className="errorMessage">Please select a time.</span>}
-            </div>
-            <div className='GuestsField'>
+            </section>
+            <section className='GuestsField'>
                 <label htmlFor="guests">Number of guests </label>
                 <input
                     type="number"
@@ -77,8 +79,8 @@ function BookingForm(props){
                     value={guests}
                     onChange={(e)=>setGuests(e.target.value)}
                 ></input>
-            </div>
-            <div className='Occasion'>
+            </section>
+            <section className='Occasion'>
                 <label htmlFor="occasion">Occasion </label>
                 <select
                     id="occasion"
@@ -96,8 +98,8 @@ function BookingForm(props){
                     <option value="Just dinner">Just dinner</option>
                 </select>
                 {occasionError && <span className="errorMessage">Please select an occasion.</span>}
-            </div>
-            <button type="submit" disabled={!validateForm()}>Make your reservation</button>
+            </section>
+            <button type="submit" disabled={!validateForm()} aria-label="Make a reservation">Make your reservation</button>
         </form>
     );
 };
